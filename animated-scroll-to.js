@@ -21,6 +21,7 @@
       minDuration: 250,
       maxDuration: 1500,
       cancelOnUserAction: true,
+      offset: 0,
       element: window,
       onComplete: undefined,
     };
@@ -35,6 +36,8 @@
         options[key] = userOptions[key];
       }
     }
+
+    desiredOffset = desiredOffset + options.offset
 
     options.isWindow = options.element === window;
 
